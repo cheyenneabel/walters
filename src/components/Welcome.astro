@@ -5,31 +5,31 @@ import background from '../assets/background.svg';
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
-		<section id="hero">
-			
 			<h1>
 				Walters Counseling Services
 			</h1>
 		
-		</section>
-	</main>
-
-	<div id="news" class="box">
-	
-		<h2>Welcome</h2>
+	<div id="aboutme" class="box">
+		<h2>Mariah Walters
+			<br>
+			<h3>Clinical Social Work/Therapist, MA, LISW, PsyD</h2></h3>
 		<p>
 			Dr. Mariah Walters specializes in Trauma and PTSD, ADHD, and family conflict.
 			She works with Correctional Officers and is a certified BWC therapy provider. LGBTQ friendly.
 			She received her doctor of psychology from Illinois School of Professional Psychology in 2014.
 			<br>
 			<br>
-			She sees individuals, couples, and families, and accepts some insurance. Please reach out to us via email or phone to discuss fees and scheduling.
+			She sees individuals, couples, and families, and accepts some insurance. 
+			Please reach out to us via email or phone to discuss fees and scheduling.
 		</p>
 	</div>
+	
+</main>
 </div>
 
 <style>
 	#background {
+		
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -42,125 +42,80 @@ import background from '../assets/background.svg';
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
-	}
-
-	main {
-		height: 100%;
 		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
+    	flex-direction: column;
+    	align-items: center;
+		margin-bottom: -10em;
 	}
 
 	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
+		font-size: 40px;
+		margin-top: 1.5em;
+		text-align: center;
+		color: #422a68;
 	}
 
 	h2 {
 		margin: 0 0 1em;
 		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-		justify-content: center;
+		color: #422a68;
+		font-size: 25px;
+		text-align: center;
+	}
+	h3 {
+		margin: 0 0 1em;
+		font-weight: 300;
+		color: #422a68;
+		font-size: 19px;
+		text-align: center;
 	}
 
 	p {
-		color: #4b5563;
+		color: #193b66;
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 0;
+		text-align: justify;
+		font-weight: 400;
 	}
 
 	code {
 		display: inline-block;
 		background:
 			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+			linear-gradient(155deg, #4224ba 0%, #3a0e3e 18%, #f5cee7 45%) border-box;
 		border-radius: 8px;
 		border: 1px solid transparent;
 		padding: 6px 8px;
 	}
 
 	.box {
-		padding: 16px;
+		margin-top: 50px;
 		background: rgba(255, 255, 255, 1);
 		border-radius: 16px;
-		border: 1px solid white;
+		border: 5px solid white;
 	}
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
+	#aboutme {
+		padding: 40px;
+		max-width: 400px;
 		text-decoration: none;
 		transition: background 0.2s;
 		backdrop-filter: blur(50px);
+    	display: flex;
+    	flex-direction: column;
+	
 	}
 
-	#news:hover {
+	#aboutme:hover {
 		background: rgba(255, 255, 255, 0.55);
 	}
 
+   
+
 	@media screen and (max-height: 368px) {
-		#news {
+		#aboutme {
 			display: none;
 		}
 	}
@@ -169,25 +124,12 @@ import background from '../assets/background.svg';
 		#container {
 			display: flex;
 			flex-direction: column;
+			
 		}
 
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
+		#aboutme {
 			right: 16px;
 			left: 16px;
-			bottom: 2.5rem;
 			max-width: 100%;
 		}
 

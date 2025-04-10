@@ -8,11 +8,55 @@
 		<title>Walters Counseling Services</title>
 	</head>
 	<body>
-		<slot />
+		<slot />		
+		<footer>
+			<div class="contact-info">
+				<div class="address">
+					<h3>Address</h3>
+					<p>670 Meridian Way, Suite 151</p>
+					<p>Westerville, Ohio 43082</p>
+				</div>
+				<div class="email">
+					<h3>Email</h3>
+					<p>walterscounselingservices@gmail.com</p>
+				</div>
+				<div class="phone">
+					<h3>Phone</h3>
+					<p>(615) 594-0155</p>
+				</div>
+				<div class="facebook">
+					<a href="https://www.facebook.com/profile.php?id=61574580237694" target="_blank" rel="noopener noreferrer">
+					  <img src="/src/assets/facebook.svg" alt="Facebook" class="facebook-icon" />
+					</a>
+
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 
 <style>
+	footer {
+		background-color: #422a68;
+		padding: 20px;
+		width: 100%;
+		bottom: 0;
+		color: rgba(248, 245, 244, 0.825)
+	}
+	.contact-info {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 10px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.address, .email, .phone, .facebook {
+		text-align: center;
+	}
+	img {
+		width: 60px; 
+    }
+	
 	html,
 	body {
 		margin: 0;
